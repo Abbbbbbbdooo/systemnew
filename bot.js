@@ -111,7 +111,7 @@ client.on('message', message => {
      let embed = new Discord.RichEmbed()
   .setAuthor(message.author.username)
   .setColor("#8650a7")
-  .addField(**"Done","تــــم ارســالك في الخــاص")
+  .addField("Done","تــــم ارســالك في الخــاص")
   message.channel.sendEmbed(embed);
     }
 });

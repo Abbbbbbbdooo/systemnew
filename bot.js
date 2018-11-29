@@ -5,7 +5,7 @@ const client = new Discord.Client();
 client.on('ready', () => {
   console.log(`Welcome Bro ${client.user.tag}!`);
 });
-const prefix = '_'
+const prefix = '$'
 
 client.on('message', message => {
   if (!message.content.startsWith(prefix)) return;
@@ -59,7 +59,7 @@ client.on('ready', () => {
 });
 client.on('ready', function(){
     var ms = 100000 ;
-    var setGame = [`_help `,`_inv`];
+    var setGame = [`$help `,`$inv`];
     var i = -1;
     var j = 0;
     setInterval(function (){
@@ -81,24 +81,24 @@ client.on("message", message => {
          .setThumbnail(message.author.avatarURL)
          .setDescription(`**
          ------------------------------
-         -bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
-         -bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
-         -bc3 : برودكاست للاعضاء  الاونلاين فقط
+         $bc1 : برودكاست لجميع اعضاء السيرفر بايمبد
+         $bc2 : برودكاست لجميع اعضاء السيرفر بدون ايمبد
+         $bc3 : برودكاست للاعضاء  الاونلاين فقط
          ------------------------------
-         -id : عرض ملفك الشخصي
-         -ask : البوت يسئلك اسئلة
-         -server : احصائيات السيرفر
+         $id : عرض ملفك الشخصي
+         $ask : البوت يسئلك اسئلة
+         $server : احصائيات السيرفر
          ------------------------------
-         -ban : حظر العضو من السيرفر
-         -kick : طرد العضو من السيرفر
-         -clear : مسح الشات
-         -createroles : عمل رتب متكاملة للسيرفر
-         -voicesetup : انشاء روم فويس اونلاين
-         لكتابة الكلام الذي في الروم اكتب -voicesetup الكلام و 0 
+         $ban : حظر العضو من السيرفر
+         $kick : طرد العضو من السيرفر
+         $clear : مسح الشات
+         $createroles : عمل رتب متكاملة للسيرفر
+         $voicesetup : انشاء روم فويس اونلاين
+         لكتابة الكلام الذي في الروم اكتب $voicesetup الكلام و 0 
          ------------------------------
-         -guilds : عدد سيرفر البوت
-         -inv : دعوه البوت الى سيرفر
-         -help : عرض هذه الرسالة
+         $guilds : عدد سيرفر البوت
+         $inv : دعوه البوت الى سيرفر
+         $help : عرض هذه الرسالة
          ------------------------------
          
        **  `)
@@ -498,4 +498,6 @@ client.on("guildCreate", guild => {
   client.channels.get("476342429575020544").send(embed)
 });
 
-client.login('NTEzMDE5NTAxOTAyNTYxMjkw.DtG1eA.M2d1Eam2kT_ClAP5XyI8xxHTens');
+
+
+client.login(process.env.BOT_TOKEN)
